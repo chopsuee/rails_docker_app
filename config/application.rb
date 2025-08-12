@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module RailsDockerApp
   class Application < Rails::Application
+    config.autoload_paths += %W(#{config.root}/app/workers)
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
 
